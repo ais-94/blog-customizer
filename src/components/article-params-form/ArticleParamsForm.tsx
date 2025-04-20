@@ -18,7 +18,7 @@ import { SyntheticEvent, useState, useRef } from 'react';
 import clsx from 'clsx';
 import { Select } from 'src/ui/select';
 import { RadioGroup } from 'src/ui/radio-group';
-//import { SelectStory } from 'src/ui/separator/Separator.stories';
+
 import { Separator } from 'src/ui/separator/Separator';
 
 import { Text } from 'src/ui/text';
@@ -56,7 +56,6 @@ export const ArticleParamsForm = ({
 	const handleResetSelectedParam = () => {
 		setSelectedStateArticle(defaultArticleState);
 		setStateArticle(defaultArticleState);
-		//console.log("Сброс")
 	};
 
 	const rootRef = useRef<HTMLDivElement>(null);
