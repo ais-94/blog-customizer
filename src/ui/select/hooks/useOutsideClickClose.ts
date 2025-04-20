@@ -22,10 +22,21 @@ export const useOutsideClickClose = ({
 			}
 		};
 
-		window.addEventListener('mousedown', handleClick);
+		document.body.addEventListener('mousedown', handleClick);
+
+		//Добавлено
+		const handleEscape = (e: KeyboardEvent) => {
+			if (e.key === 'Escape') {
+				isOpen && onClose?.();
+				onChange?.(false);
+			}
+		};
+
+		window.addEventListener('keydown', handleEscape);
 
 		return () => {
-			window.removeEventListener('mousedown', handleClick);
+			window.removeEventListener('keydown', handleEscape);
+			document.body.removeEventListener('mousedown', handleClick);
 		};
 	}, [onClose, onChange, isOpen]);
 };

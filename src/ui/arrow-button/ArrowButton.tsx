@@ -3,6 +3,10 @@ import arrow from 'src/images/arrow.svg';
 import styles from './ArrowButton.module.scss';
 import clsx from 'clsx';
 
+//import { useOutsideClickClose } from '../select/hooks/useOutsideClickClose';
+
+//import { FormEvent, useRef, useState } from 'react';
+
 /** Функция для обработки открытия/закрытия формы */
 export type OnClick = () => void;
 
